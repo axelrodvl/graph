@@ -9,7 +9,6 @@ func Dfs(edges *[]Edge, firstVertex string) []string {
 	var path []string
 
 	graph := InitializeGraph(edges)
-	fmt.Println("graph vertices: ", graph.Vertices)
 
 	if e := getPath(graph, &path, firstVertex); e == nil {
 		fmt.Println("graph traversed successfully, no cycles found")
