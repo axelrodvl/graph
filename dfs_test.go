@@ -11,12 +11,12 @@ func TestDfs(t *testing.T) {
 
 	var edges []Edge
 	edges = append(edges,
-		Edge{"e", "a"},
-		Edge{"a", "b"},
-		Edge{"a", "c"},
-		Edge{"b", "d"})
+		Edge{"e", "a", 0},
+		Edge{"a", "b", 0},
+		Edge{"a", "c", 0},
+		Edge{"b", "d", 0})
 
 	fmt.Println("graph edges: ", edges)
 
-	assert.Equal(t, Dfs(&edges, "e"), []string{"e", "a", "b", "d", "c"}, "invalid path")
+	assert.Equal(t, []string{"e", "a", "b", "d", "c"}, Dfs(&edges, "e"), "invalid path")
 }

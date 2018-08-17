@@ -3,6 +3,7 @@ package graph
 type Edge struct {
 	From string
 	To string
+	Length int
 }
 
 type Vertex struct {
